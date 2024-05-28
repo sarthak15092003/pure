@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>
+        pure
+    </title>
+
+    <style>
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 30%;
+            left: 19%;
+            transform: translate(-50%, -50%);
+            background-color:;
+            color: #fff;
+            padding: 10px 20px;
+        }
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'segoe ui';
+        }
+
+        .nav {
+            height: 71px;
+            width: 100%;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .nav>.nav-header {
+            display: inline;
+        }
+
+        .nav>.nav-header>.nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .nav>.nav-btn {
+            display: none;
+        }
+
+        .nav>.nav-links {
+            display: inline;
+            float: right;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .nav>.nav-links>a {
+            display: inline-block;
+            padding: 13px 10px;
+            text-decoration: none;
+            color: #452f8a;
+        }
+
+        .nav>#nav-check {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .nav>.nav-btn {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .nav>.nav-btn>label {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                padding: 13px;
+            }
+
+            .nav>.nav-btn>label:hover,
+            .nav #nav-check:checked~.nav-btn>label {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .nav>.nav-btn>label>span {
+                display: block;
+                width: 25px;
+                height: 10px;
+                border-top: 2px solid #eee;
+            }
+
+            .nav>.nav-links {
+                position: absolute;
+                display: block;
+                width: 100%;
+                background-color: white;
+                height: 0;
+                transition: all 0.3s ease-in;
+                overflow-y: hidden;
+                top: 50px;
+                left: 0;
+            }
+
+            .nav>.nav-links>a {
+                display: block;
+                width: 100%;
+            }
+
+            .nav>#nav-check:not(:checked)~.nav-links {
+                height: 0;
+            }
+
+            .nav>#nav-check:checked~.nav-links {
+                height: calc(100vh - 50px);
+                overflow-y: auto;
+            }
+        }
+    </style>
+    
+   
+     
+
+        
+      
+
+
+ <style>
+        
+        .dropdown-content {
+            display: none;
+            background-color:#e5f3ff;
+           
+          
+        }
+        .dropdown-container:hover .dropdown-content,
+        .dropdown-container:focus-within .dropdown-content {
+            display: block;
+        }
+    </style>
+    
+</head>
+
+<body style="background-color: #d7d7d7;">
+
+    <div class="nav" style="z-index: 1;">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title" style="color: #ffc000">
+                <img src="logo1.jpg" alt="Girl in a jacket" style="margin-left: 100px;" width="124px" height="50px">
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a><b>Home</b></a>
+            <a><b>Water Purifier</b></a>
+            <a><b>Plans</b></a>
+            <a><b>Refer&Earn</b></a>
+            <a><b>Help</b></a>
+            <button type="button" class="btn btn-primary"
+                style="margin-left: 108px;background-color: #452f8a;border-color: #452f8a;">Enquire Now</button>
+        </div>
+        <i class="fa fa-sign-in" aria-hidden="true"
+            style="font-size:30px;margin-left: 28px;margin-top: 21px;"></i><b
+            style="margin-left: 10px;margin-top: 23px;color: orange;">Login</b>
+        <i class="fa fa-user-o" aria-hidden="true"
+            style="font-size:30px;margin-left: 28px;margin-top: 19px;"></i><b
+            style="margin-left: 10px;margin-top: 23px;color: orange;">Sign Up</b>
+    </div>
+
+    <br><br>
+   <div class="image-container">
+        <img src="banner.jpg" alt="Girl in a jacket" style="max-width: 100%; height: auto;">
+        <div class="text-overlay" style="font-size: 36px; color: #452f8a; text-align: center;">
+            <div style="margin-left: 20px; margin-right: 20px;">
+                India's No.1 Smart Water <br> Purifier on Subscription<br>
+                <div style="color: black; font-size: 22px;">Start from ₹349/month</div>
+                <div><button type="button" class="btn btn-primary">SUBSCRIBE NOW</button></div>
+                <div style="color: black; font-size: 22px;">Start from ₹349/month</div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <img src="top.png" alt="Girl in a jacket" style="max-width: 100%;">
+    <br>
+    <div style="background-color: white;">
+
+        <center><b style="color: #452f8a;font-size: 42px;">SMART APP FOR SMART USERS</b></center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <img src="mobile_Zero.webp" alt="Girl in a jacket" style="max-width:100%; height:536px;">
+                </div>
+                <div class="col-md-8 " style="font-size: 20px; padding: 35px; line-height: 51px;">
+                    <b>Livpure Smart App Features</b><br>
+                    <ul>
+                        <li><b>Monitor Filter Quality:</b> Your safety is our priority. Our app will help you track
+                            real-time filter quality.</li>
+                        <li><b>Track water usage:</b> Check your water consumption and recharge or top-up your account.
+                        </li>
+                        <li><b>Service Requests:</b> Have trouble with your machine? Raise a service request at your
+                            fingertips.</li>
+                    </ul>
+                    <b>Download the App</b><br>
+                    <img src="play.png" alt="Girl in a jacket" style="max-width:79%; height:98px;">
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <center><b style="color: #452f8a;font-size: 42px;">WHY LIVPURE SMART IS THE BEST CHOICE IN INDIA
+                <br><br>
+            </b></center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 " style="font-size: 35px;">
+                    <b><f style="color: #452f8a;;">₹0</f> MACHINE COST</b><br><br>
+                    <b><f style="color: #452f8a;;">₹0</f> INSTALLATION CHARGES</b>
+                </div>
+                <div class="col-md-6 " style="font-size: 35px;">
+                    <b><f style="color: #452f8a;;">₹0</f> MAINTENANCE</b></b><br>
+                    <br>
+                    <b><f style="color: #452f8a;;">₹0</f> RELOCATION CHARGES</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <div style="background-color: white;">
+        <img src="innovation_img.webp" alt="Girl in a jacket" style="width:100%; height:200px;">
+        <center style="color: #452f8a;font-size: 34px;"><b>INNOVATION FOR THE SMART GENERATION </b></center>
+        <center>Livpure Smart is the sensible option for homeowners as it eliminates most of the worries of
+            ownership.<br>
+            It also means you enjoy the best water at an affordable rate.</center><br>
+
+
+        <br>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <center><img src="risk.png" alt="Girl in a jacket" style="max-width:100%; "></center><br>
+                    <b><center
+                            style="font-size: 20px;font-family: NeoSansPro-Medium;text-transform: uppercase;font-size: 20px;">7
+                            DAYS NO RISK TRIAL</center></b><br>
+                    <p style="color: #452f8a;text-align: justify;">Getting started is easy! And you can do it all at
+                        no additional installation costs. Means an intelligent choice!</p>
+                </div>
+                <div class="col-md-4">
+                    <center><img src="maintaince.png" alt="Girl in a jacket" style="max-width:100%;"></center><br>
+                    <b><center
+                            style="font-size: 20px;font-family: NeoSansPro-Medium;text-transform: uppercase;font-size: 20px;">FREE
+                            LIFETIME MAINTENANCE</center></b>
+                </div>
+                <div class="col-md-4">
+                    <center><img src="support.png" alt="Girl in a jacket" style="max-width:100%;"><b></center><br>
+                    <center
+                        style="font-size: 20px;font-family: NeoSansPro-Medium;text-transform: uppercase;font-size: 20px;">APP
+                        SUPPORT</center></b><br>
+                    <p style="text-align: justify;color:  #452f8a;">Experience the convenience with innovative
+                        engineering like IOT-enabled technology, filter health information, and service support on your
+                        mobile screen.</p>
+                </div>
+            </div>
+            <br><br>
+            <center style="color:  #452f8a;">The machine and servicing are both managed and provided by Livpure
+                Private Limited.</center>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <br>
+    <div style="background-color: white;">
+        <center style="color: #452f8a;font-size: 34px;"><b>A SMART DEAL, GUARANTEED!</b></center>
+        <center>
+            <p style="color:  #452f8a;">Get a worry-free supply of RO filtered pure water. That too at a much less
+                price than branded water jars or the best water purifier.</p>
+        </center>
+        <br>
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3">
+                    <div class="card text-center" style="background-color: #e8e5e5;">
+                        <div class="card-body">
+                            <div class="product-img">
+                                <img src="logo1.jpg"class="rounded-circle"  alt="Livpure Smart Logo"style="width: 90px;height: 90px; ">
+                            </div>
+                            <b><p class="card-title product-name" style="color:  #452f8a;">DESCRIPTION</p></b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Cost Per Litre</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Buying Cost</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Annual Maintenance</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Water Quality</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Water Quality Check</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Filter Health Life Check</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Maintenance / Service Schedule</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-3">
+                    <div class="card text-center"style="background-color: #e8e5e5;">
+                        <div class="card-body">
+                            <div class="product-img">
+                                <img src="logo1.jpg"class="rounded-circle" alt="LivpureSmart Water Jar Icon" style="width: 104px;height: 114px; ">
+                            </div>
+                            <b><p class="card-title product-name" style="color:  #452f8a;">LIVPURE SMART</p></b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"style="background-color: #e8e5e5;"> 0.5 For 999 Litres Month</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Zero</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Zero</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">High</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Real Time for every drop</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Real Time for every drop</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Automated</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3">
+                    <div class="card text-center"style="background-color: #e8e5e5;">
+                        <div class="card-body">
+                            <div class="product-img">
+                                <img src="jar.png"  alt="LivpureSmart Water Jar Icon" style="width: 90px;height: 90px; ">
+                            </div>
+                            <b><p class="card-title product-name"style="color:  #452f8a;">WATER JARS</p></b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"style="background-color: #e8e5e5;"> 2 to 4</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">NA</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">NA</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Questionable</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Monitored at filling station only</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">NA</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">NA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3">
+                    <div class="card text-center"style="background-color: #e8e5e5;">
+                        <div class="card-body">
+                            <div class="product-img">
+                                <img src="purifire.png" alt="Established RO Water Purifiers Icon" style="width: 90px;height: 92px;">
+                            </div>
+                            <b><p class="card-title product-name" style="color:  #452f8a;">ESTABLISHED RO WATER PURIFIERS</p></b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"style="background-color: #e8e5e5;"> 2 to 2.4</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;"> 15000-35000</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;"> 4000-5000</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">High</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">NA</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">NA</li>
+                            <li class="list-group-item"style="background-color: #e8e5e5;">Full of hassles and manual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+<div style="background-color: white;">
+  <div class="container">
+        <h2 style="font-size: 32px;color: #442c8c;text-transform: uppercase;font-family: NeoSansPro-Medium;text-align: center;line-height: 35px;">THE IMPORTANCE OF RO WATER PURIFIERS FOR HOME</h2>
+        <div class="content">
+            <p style="
+    font-size: 16px;
+    font-family: 'NeoSansPro-Regular';
+    color: black;
+   
+    text-align: ;">A pioneer in the water purifier category, Livpure Smart follows a customer-centric approach and is dedicated to delivering innovative products that employ a host of advanced technologies like RO, UV, and UF to ensure a supply of clean, safe, and hygienic drinking water for our customers.
+<br><br>
+These days, it has become extremely convenient for people to access clean drinking water, especially given how affordable it is to install an RO water purifier at your home. Installing an RO purifier comes with a host of benefits and now, you don’t even have to worry about the upfront cost of a purifier. With Livpure Smart’s RO Subscription Plans, RO water purifier installation has become more affordable than ever before.
+<br><br>
+The importance of clean drinking water cannot be denied as it is a well-known fact that drinking contaminated water can lead to several ailments. Keeping all this in mind, getting an RO water purifier for your home makes perfect sense and with Livpure Smart’s easy subscription plans, it does not even have to be a burden on your pocket!</p>
+        </div>
+        
+        <div class="content">
+            <h2 style="font-size: 32px;color: #442c8c;text-transform: uppercase;font-family: NeoSansPro-Medium;line-height: 35px;">Why Get a Home RO Water Purifier from Livpure Smart?</h2>
+            <p>One of India's most popular RO water purifier brands, Livpure Smart products are developed using precision engineering and are equipped with the most advanced technologies to ensure a supply of pure, clean, and healthy drinking water.</p>
+            <p>Additionally, to ensure that everyone is able to access clean drinking water with ease, Livpure Smart offers a range of RO Water Purifier Subscription Plans that make installing an RO water purifier at your home extremely convenient and affordable. Some of the top features that make our RO water purifiers the best choice for your home include:</p>
+            <ul class="features">
+                <li>Minimal Water Wastage</li>
+                <li>RO + UV + UF Technologies</li>
+                <li>Taste Enhancer</li>
+                <li>In-Tank UV Sterilisation</li>
+                <li>Advanced 6-Stage Purification Process</li>
+                <li>Smart App for Service Support</li>
+            </ul>
+        </div>
+
+        <div class="subscription">
+            <h2 style="font-size: 32px;color: #442c8c;text-transform: uppercase;font-family: NeoSansPro-Medium;line-height: 35px;">RO Water Purifier Offered Under Livpure Smart Subscription Plans</h2>
+            <h3 style="color: #442c8c;">Bolt Mineraliser</h3>
+            <p>The Livpure Smart Bolt Mineraliser can be installed to purify water from any source. Equipped with the latest RO + UV + Mineraliser technologies, innovative 6-stage water purification process, carbon block filters, and more, the Bolt Mineraliser showcases an aesthetic minimalistic design and does not require a lot of space for installation.</p>
+            <p style="color: #442c8c;"><strong>Specifications of Bolt Mineraliser:</strong></p>
+            <ul class="features">
+                <li>In-Tank UV Sterilisation</li>
+                <li>6-Litre Capacity</li>
+                <li>Mineraliser to Replenish Essential Nutrients in Drinking Water</li>
+                <li>Stylish Design and Compact Size</li>
+            </ul>
+
+            <h3 style="font-size: 32px;color: #442c8c;text-transform: uppercase;font-family: NeoSansPro-Medium;line-height: 35px;">Zinger Copper Hot</h3>
+            <p>A state-of-the-art RO water purifier by Livpure Smart, the Zinger Copper Hot employs advanced RO + UV + UF purification technology that ensures a supply of clean and good tasting drinking water. Also equipped with an interactive LED touch display, the RO water purifier also enriches your drinking water with the benefits of copper and allows you to choose from three temperature options – ambient, warm, and hot.</p>
+            <p style="color: #442c8c;"><strong>Specifications of Zinger Copper Hot:</strong></p>
+            <ul class="features">
+                <li>Copper29 Cartridge for an Extra Layer of Protection</li>
+                <li>6 Stages of Advanced Purification</li>
+                <li>Instant 10X Hot Water</li>
+                <li>Interactive Touch Display</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+ <center><img src="tag.png" alt="Girl in a jacket" style="max-width:80%;border-radius: 3%; "></center>
+
+ <br><br>
+ <div style="background-color: white;">
+<center><h2 style="color:  #442c8c;">    CONSUMERS WHO MADE THE SMART CHOICE</h2></center>
+
+<div class="container">
+            <div class="row">
+                <div class="col-md-6 " >
+<iframe width="500" height="315" src="https://www.youtube.com/embed/7doms-Lt7WU?si=Y7iwBwu0QvScasr7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                 <div class="col-md-6 " >
+<iframe width="500" height="315" src="https://www.youtube.com/embed/bDTHyq8CK0E?si=bZubz5kifl3C7TmK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+<br><br><br>
+</div><br>
+
+ <center><img src="card.png" alt="Girl in a jacket" style="max-width:100%; "></center>
+<br>
+<div style="background-color: white;">
+    <center><h2 style="color:  #442c8c;">   Frequently Asked Questions About RO Water Purifiers</h2></center>
+
+<div class="container" >
+        <div class="dropdown-container" style="  margin-bottom: 10px;">
+            <button class="dropdown-button" style=" background-color: #e5f3ff;padding: 10px 20px;border: none;cursor: pointer;width: 100%;text-align: left;
+            outline: none;">1. Is installing a water purifier affordable?</button>
+            <div class="dropdown-content">
+                <p>Yes. When you consider the many benefits of installing RO water purifiers, it makes complete sense to install one in your home. Though the upfront cost is well worth it in the long run, you can also consider taking an RO water purifier Subscription plan from Livpure Smart, where you get the water purifier for a small monthly subscription fee.</p>
+            </div>
+        </div>
+
+        <div class="dropdown-container" style="  margin-bottom: 10px;">
+            <button class="dropdown-button" style=" background-color: #e5f3ff;padding: 10px 20px;border: none;cursor: pointer;width: 100%;text-align: left;
+            outline: none;">2. Why choose Livpure Smart Subscription Plans?</button>
+            <div class="dropdown-content" >
+                <p>Livpure Smart Subscription Plans allow you to get an advanced RO water purifier at your home, without the hassles of buying one. They also include a 7-day free trial period and start from as low as Rs 349 per month. There are zero maintenance and installation charges, and you also get to choose from a number of subscription plans based on your needs.</p>
+            </div>
+        </div>
+
+        <div class="dropdown-container" style="  margin-bottom: 10px;">
+            <button class="dropdown-button" style=" background-color: #e5f3ff;padding: 10px 20px;border: none;cursor: pointer;width: 100%;text-align: left;
+            outline: none;">3. What are the benefits of taking Livpure Smart RO water purifiers on subscription?</button>
+            <div class="dropdown-content">
+                <p>Benefits of Livpure Smart RO water purifiers on subscription include zero machine cost, free installation, no relocation cost, smart app support for monitoring filter quality and water usage, free 7-day no-risk trial, real-time water quality check, filter replacement at no extra cost, easy subscription and cancellation processes, and a 100% refundable security deposit when services are stopped.</p>
+            </div>
+        </div>
+
+        <div class="dropdown-container" style="  margin-bottom: 10px;">
+            <button class="dropdown-button"  style=" background-color: #e5f3ff;padding: 10px 20px;border: none;cursor: pointer;width: 100%;text-align: left;
+            outline: none;">4. What should we check before renting an RO water purifier?</button>
+            <div class="dropdown-content">
+                <p>Before renting an RO water purifier, consider your average monthly water consumption, the technologies offered by the purifier, subscription plan fees compared to the required features, check for hidden charges, ensure free lifetime maintenance, and verify the availability of robust customer service support.</p>
+            </div>
+        </div>
+
+        <div class="dropdown-container" style="  margin-bottom: 10px;">
+            <button class="dropdown-button"  style=" background-color: #e5f3ff;padding: 10px 20px;border: none;cursor: pointer;width: 100%;text-align: left;
+            outline: none;">5. Which RO water purifiers are available under Livpure Smart’s subscription plans?</button>
+            <div class="dropdown-content">
+                <p>Under the regular subscription plans, you will be provided with a Livpure Smart Bolt or Envy RO water purifier, both top-of-the-line models. The machine will be provided to you based on availability. If you choose a premium subscription plan, you will receive the Livpure Smart Zinger Copper Hot RO water purifier with an interactive touch display and three water temperature options.</p>
+            </div>
+        </div>
+
+        <div class="dropdown-container"style="  margin-bottom: 10px;">
+            <button class="dropdown-button"  style=" background-color: #e5f3ff;padding: 10px 20px;border: none;cursor: pointer;width: 100%;text-align: left;
+            outline: none;">6. What documents do I need to submit for a Livpure Smart RO water purifier subscription?</button>
+            <div class="dropdown-content">
+                <p>For a Livpure Smart RO water purifier subscription, you will need to submit basic KYC-related documents. You can provide your ID and address proof online. The RO water purifier will be installed within 72 hours of documentation once the proofs have been verified.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+ <footer style="background-color: #442c8c;">
+        <div class="container">
+            <div class="row">   
+                <div class="col-md-3">
+                    <br><br>
+                    <h3 style="color: white;">Company</h3>
+
+                    <ul style="color: white;">
+                        <li >About us</li>
+                        <li>Plans</li>
+                        <li>How it Works</li>
+                        <li>FAQs</li>
+                        <li >Blog</li>
+                        <li >Investors</li>
+                    </ul>
+                    <br>
+                    <b><h5 style="color: white;">follow us</h5></b>
+                    <i class="fa fa-facebook" style="font-size:30px;color: white;"></i>
+                    <i class="fa fa-twitter" style="font-size:30px;color: white;"></i>
+                    <i class="fa fa-instagram" style="font-size:30px;color: white;"></i>
+                    <i class="fa fa-youtube" style="font-size:30px;color: white;"></i>
+                    <i class="fa fa-linkedin" style="font-size:30px;color: white;"></i>
+
+
+
+                </div>
+                <div class="col-md-3">
+                    <br><br>
+                    <h3 style="color: white;">Product</h3>
+                    <ul style="color: white;">
+                        <li >Water Purifier</a></li>
+                        <li>Bolt Mineralizer</a></li>
+                        <li>Zinger Copper Hot</li>
+                        <li>Nook-Smart Ac Controller</li>
+                        <li>TDS Calculator</a></li>
+                        <li>Installation Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <br><br>
+                    <h3 style="color: white;">Subscription Plans</h3>
+                    <ul style="color: white;">
+                        <li>Water Purifier Plans</li><br>
+                        <h5>Water Purifier Subscription Cities</h5>
+                        <br>
+                        <li>Water Purifier on Rent in Delhi</li>
+                        <li>Water Purifier on Rent in Bangalore</li>
+                        <li>Water Purifier on Rent in Hyderabad</li>
+                        <li>Water Purifier on Rent in Pune</li>
+                        <li>Water Purifier on Rent in Lucknow</li>
+                        <li>Water Purifier on Rent in Chennai</li>
+                        <li>Water Purifier on Rent in Kolkata</li>
+                        <li>Water Purifier on Rent in Mumbai</li>
+
+
+
+
+
+
+                       
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <br><br>
+                    <h3 style="color: white;">Customer Support</h3>
+                    <p style="color: white;">Call Us:</p>
+                    <p style="color: white;">For Buy New: +91 9560211162</p>
+                    <p style="color: white;">For Service Request: 88 0076 2226</p>
+                    <p style="color: white;">Mail Us: care@livpuresmart.com</p>
+                    <p style="color: white;">Working Hours: 10AM - 7PM, All Days</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 text-center"style="color: white;">
+                    <p>&copy; 2023 Livpure Smart. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
